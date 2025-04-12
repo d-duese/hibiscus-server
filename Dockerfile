@@ -1,4 +1,4 @@
-ARG HIBISCUS_VERSION=2.10.25 \
+-ARG HIBISCUS_VERSION=2.10.25 \
     HIBISCUS_DOWNLOAD_PATH=/opt/hibiscus-server.zip \
     HIBISCUS_SERVER_PATH=/opt/hibiscus-server \
     OPENJDK_VERSION=20-slim
