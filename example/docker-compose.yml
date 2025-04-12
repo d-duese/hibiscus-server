@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  hibiscus-server:
+    container_name: hibiscus-server
+    restart: always
+    image: d-duese/hibiscus-server:2.10.25
+    ports:
+      - "8080:8080"
+    volumes:
+      - hibiscus_cfg:/opt/hibiscus-server/cfg
+      - jameica_data:/root/.jameica
+    environment:
+      HIBISCUS_PASSWORD: mySecretPassword
+
+  hibiscus-mariadb:
+    container_name: "hibiscus-mariadb"
+    image: "mariadb:latest"
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    restart: always
+    volumes:
+      - "hibiscus-db:/var/lib/mysql"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=mySecretRootPw"
+      - "MYSQL_DATABASE=hibiscus"
+      - "MYSQL_USER=hibiscus"
+      - "MYSQL_PASSWORD=hibiscus"
+
+volumes:
+  hibiscus-db:
+  hibiscus_cfg:
+  jameica_data:
