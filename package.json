@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IARI/hibiscus-server-docker.git"
+    "url": "git+https://github.com/d-duese/hibiscus-server-docker.git"
   },
-  "author": "Julian Jarecki",
+  "author": "ari sir",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IARI/hibiscus-server-docker/issues"
+    "url": "https://github.com/d-duese/hibiscus-server-docker/issues"
   },
-  "homepage": "https://github.com/IARI/hibiscus-server-docker#readme",
+  "homepage": "https://github.com/d-duese/hibiscus-server-docker#readme",
   "dependencies": {
     "xmldom": "^0.6.0",
     "xpath": "^0.0.32"
